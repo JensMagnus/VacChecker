@@ -17,7 +17,7 @@ var lookup = {};
 // Get all the elements we need to later get the Ids and insert html into.
 var friends = [].slice.call(document.querySelectorAll('#memberList .member_block, .friendHolder, .friendBlock'));
 
-// Foreach friend, add him to the list along with his steam64 id.
+// Foreach friend, add him to the list along with his steam64 id. Ripperino when new design.
 friends.forEach(function (friend) {
     var id = friend.
         getElementsByClassName("manage_friend_checkbox")[0] // main
