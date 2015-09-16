@@ -31,6 +31,7 @@ friends.forEach(function (friend) {
     lookup[id].push(friend); // store reference to the friend element so we can insert html here later.
 });
 
+// TODO: Comment this, maybe even do it without AngularJS as there's CORS issues with the HTTP version of the site.
 var app = angular.module('app', []).run(function ($http) {
     var ids = Object.keys(lookup);
     $http.get(apiUrl + ids.join(",")).success(function (data) {
