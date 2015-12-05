@@ -8,7 +8,7 @@
 // @match       	http://steamcommunity.com/*/friends/coplay*
 // ==/UserScript==
 
-var apiUrl = "http://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=A0A47E806ED927C2F71C9B16EE27FD4D&steamids=";
+var apiUrl = "https://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=A0A47E806ED927C2F71C9B16EE27FD4D&steamids=";
 
 // An empty list of IDs to look up.
 var lookup = {};
