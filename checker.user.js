@@ -35,7 +35,7 @@ friends.forEach(function (friend) {
 
 var app = angular.module('app', []).run(function ($http) {
     var ids = Object.keys(lookup);
-    $http.jsonp(apiUrl + ids.join(",")).success(function (data) {
+    $http.jsonp(apiUrl + ids.join(",") + "?callback=JSON_CALLBACK").success(function (data) {
         data.players.forEach(function (player) {
             var elements = lookup[player.SteamId];
 
