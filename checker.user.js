@@ -19,7 +19,6 @@ var friends = [].slice.call(document.querySelectorAll('#memberList .member_block
 
 // Foreach friend, add him to the list along with his steam64 id. Ripperino when new design.
 friends.forEach(function (friend) {
-    console.log("First");
     var id = friend.
         getElementsByClassName("manage_friend_checkbox")[0] // main
         .childNodes[1] // input tag
@@ -32,7 +31,6 @@ friends.forEach(function (friend) {
     lookup[id].push(friend); // store reference to the friend element so we can insert html here later.
 });
 
-// TODO: Comment this and maybe try to fix the CORS issue using the HTTPS version of the site. The Chrome equivalent is working fine...
 var app = angular.module('app', []).run(function ($http) {
     var ids = Object.keys(lookup);
     $http.jsonp(apiUrl + ids.join(",")).success(function (data) {
