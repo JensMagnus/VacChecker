@@ -7,6 +7,8 @@
 // @require		    https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js
 // @match       	http://steamcommunity.com/*/friends/coplay*
 // @match       	https://steamcommunity.com/*/friends/coplay*
+// @match           http://steamcommunity.com/id/*/friends/*
+// @match           https://steamcommunity.com/id/*/friends/*
 // ==/UserScript==
 
 var apiUrl = "https://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=A0A47E806ED927C2F71C9B16EE27FD4D&steamids=";
