@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name 			VacChecker
 // @namespace 		https://cfx.dk
-// @version 		1.1
+// @version 		1.2
 // @description 	Checks the status of vac/game bans.
 // @author			Jens Magnus
 // @require		    https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js
