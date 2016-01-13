@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name 			VacChecker
 // @namespace 		https://cfx.dk
-// @version 		1.3
+// @version 		1.3.1
 // @description 	Checks the status of vac/game bans.
 // @author			Jens Magnus
 // @require		    https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js
@@ -35,7 +35,7 @@ friends.forEach(function (friend) {
 
 var app = angular.module('app', []).run(function ($http) {
     var ids = Object.keys(lookup);
-    $http.jsonp(apiUrl + ids.join(",") + "?callback=JSON_CALLBACK").success(function (data) {
+    $http.get(apiUrl + ids.join(",")).success(function (data) {
         data.players.forEach(function (player) {
             var elements = lookup[player.SteamId];
 
