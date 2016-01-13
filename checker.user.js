@@ -34,7 +34,7 @@ friends.forEach(function (friend) {
 // TODO: Comment this and maybe try to fix the CORS issue using the HTTPS version of the site. The Chrome equivalent is working fine...
 var app = angular.module('app', []).run(function ($http) {
     var ids = Object.keys(lookup);
-    $http.get(apiUrl + ids.join(",")).success(function (data) {
+    $http.jsonp(apiUrl + ids.join(",")).success(function (data) {
         data.players.forEach(function (player) {
             var elements = lookup[player.SteamId];
 
